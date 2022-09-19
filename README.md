@@ -1,0 +1,22 @@
+# BlockPortals - Minecraft plugin
+
+Allows admins to block and allows portal telepotring to overworld, nether, end
+
+## Commands & Permissions
+
+* `switchdim` - Switch dimension access. Permission - `blockportals.switchdim`. Alias - `switchdimension`
+* `bpreload` - Reload BlockPortals. Permission - `blockportals.reload`. Aliases - `blockportalsreload`, `blockportalsrl`, `bprl`
+
+## config.yml
+```yaml
+allow-end: true
+allow-nether: true
+allow-overworld: true
+messages:
+  reloaded: '&aConfig reloaded!'
+  allowed: '&aPortals to &e%dim%&a allowed'
+  blocked: '&cPortals to &e%dim%&c blocked'
+  allowed-already: '&aPortals to &e%dim%&d already&a allowed'
+  blocked-already: '&cPortals to &e%dim%&d already&c blocked'
+  incorrect-switch: '&cIncorrect world or state!'
+```
