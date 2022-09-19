@@ -1,0 +1,10 @@
+allow-end: true
+allow-nether: true
+allow-overworld: true
+messages:
+  reloaded: "&aConfig reloaded!"
+  allowed: "&aPortals to &e%dim%&a allowed"
+  blocked: "&cPortals to &e%dim%&c blocked"
+  allowed-already: "&aPortals to &e%dim%&d already&a allowed"
+  blocked-already: "&cPortals to &e%dim%&d already&c blocked"
+  incorrect-switch: "&cIncorrect world or state!"

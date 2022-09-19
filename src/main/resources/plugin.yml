@@ -1,0 +1,19 @@
+name: BlockPortals
+version: '${project.version}'
+main: xyz.bobkinn_.blockportals.BlockPortals
+#api-version: 1.19
+author: BoBkiNN_
+libraries:
+  - "commons-io:commons-io:2.11.0"
+commands:
+  switchdim:
+    description: Switch dimension access
+    permission: blockportals.switchdim
+    aliases: ["switchdimension"]
+  bpreload:
+    description: Reload BlockPortals
+    permission: blockportals.reload
+    aliases:
+      - blockportalsreload
+      - blockportalsrl
+      - bprl
