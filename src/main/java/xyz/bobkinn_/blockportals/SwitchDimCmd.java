@@ -52,6 +52,7 @@ public class SwitchDimCmd implements CommandExecutor {
                 if (allow){
                     String alreadyA = BlockPortals.configuration.getString("messages.allowed-already", "&aPortals to &e%dim%&d already&a allowed");
                     sender.sendMessage(color(alreadyA.replace("%dim%", world)));
+                    return true;
                 } else {
                     BlockPortals.configuration.set(opt, true);
                     sender.sendMessage(color(msgA));
@@ -61,6 +62,7 @@ public class SwitchDimCmd implements CommandExecutor {
                 if (!allow){
                     String alreadyB = BlockPortals.configuration.getString("messages.blocked-already", "&cPortals to &e%dim%&d already&c blocked");
                     sender.sendMessage(color(alreadyB.replace("%dim%", world)));
+                    return true;
                 } else {
                     BlockPortals.configuration.set(opt, false);
                     sender.sendMessage(color(msgB));

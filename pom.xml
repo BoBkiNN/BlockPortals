@@ -6,7 +6,7 @@
 
     <groupId>xyz.bobkinn_</groupId>
     <artifactId>blockportals</artifactId>
-    <version>0.2-b4</version>
+    <version>0.2-b5</version>
     <packaging>jar</packaging>
 
     <name>BlockPortals</name>
