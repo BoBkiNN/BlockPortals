@@ -1,6 +1,6 @@
 # BlockPortals - Minecraft plugin
 
-Allows admins to block and allows portal telepotring to overworld, nether, end
+Allows admins to block and allows portal teleporting to overworld, nether, end
 
 ## Commands & Permissions
 
