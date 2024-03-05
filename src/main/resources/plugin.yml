@@ -1,7 +1,7 @@
 name: BlockPortals
 version: '${project.version}'
 main: xyz.bobkinn_.blockportals.BlockPortals
-#api-version: 1.19
+api-version: 1.13
 author: BoBkiNN_
 libraries:
   - "commons-io:commons-io:2.11.0"
