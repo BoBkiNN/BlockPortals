@@ -7,6 +7,7 @@ import org.bukkit.command.CommandSender;
 
 import javax.annotation.Nonnull;
 import java.io.IOException;
+import java.util.logging.Level;
 
 public class SwitchDimCmd implements CommandExecutor {
 
@@ -76,7 +77,7 @@ public class SwitchDimCmd implements CommandExecutor {
         try {
             BlockPortals.configuration.save(BlockPortals.configFile);
         } catch (IOException e) {
-            e.printStackTrace();
+            BlockPortals.plugin.getLogger().log(Level.SEVERE, "Cannot save config", e);
         }
         return true;
     }
