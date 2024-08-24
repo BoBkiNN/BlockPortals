@@ -1,6 +1,9 @@
 allow-end: true
 allow-nether: true
 allow-overworld: true
+
+creative-bypass: true
+
 messages:
   reloaded: "&aConfig reloaded!"
   allowed: "&aPortals to &e%dim%&a allowed"

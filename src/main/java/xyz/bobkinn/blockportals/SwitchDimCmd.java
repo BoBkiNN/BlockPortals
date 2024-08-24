@@ -1,4 +1,4 @@
-package xyz.bobkinn_.blockportals;
+package xyz.bobkinn.blockportals;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -9,28 +9,29 @@ import javax.annotation.Nonnull;
 import java.io.IOException;
 
 public class SwitchDimCmd implements CommandExecutor {
-    public static String color(String text){
+
+    public static String color(String text) {
         return ChatColor.translateAlternateColorCodes('&', text);
     }
 
     @Override
-    public boolean onCommand(@Nonnull CommandSender sender,@Nonnull Command command,@Nonnull String label, String[] args) {
+    public boolean onCommand(@Nonnull CommandSender sender, @Nonnull Command command, @Nonnull String label, String[] args) {
         String incorrect = BlockPortals.configuration.getString("messages.incorrect-switch", "&cIncorrect world or state!");
-        if (args.length == 0){
+        if (args.length == 0) {
             sender.sendMessage(color(incorrect));
             return true;
         }
         String world = args[0];
-        String opt = "allow-"+world;
+        String opt = "allow-" + world;
         String msgA = BlockPortals.configuration.getString("messages.allowed", "&aPortals to &e%dim%&a allowed");
         msgA = msgA.replace("%dim%", world);
         String msgB = BlockPortals.configuration.getString("messages.blocked", "&cPortals to &e%dim%&c blocked");
         msgB = msgB.replace("%dim%", world);
         boolean correctWorld = world.equals("overworld") || world.equals("nether") || world.equals("end");
-        if (args.length == 1){
-            if (correctWorld){
+        if (args.length == 1) {
+            if (correctWorld) {
                 boolean allow = !BlockPortals.configuration.getBoolean(opt, true);
-                if (allow){
+                if (allow) {
                     sender.sendMessage(color(msgA));
                 } else {
                     sender.sendMessage(color(msgB));
@@ -41,15 +42,15 @@ public class SwitchDimCmd implements CommandExecutor {
                 return true;
             }
         } else {
-            if (!correctWorld){
+            if (!correctWorld) {
                 sender.sendMessage(color(incorrect));
                 return true;
             }
             String state = args[1];
 
-            if (state.equalsIgnoreCase("on")){
+            if (state.equalsIgnoreCase("on")) {
                 boolean allow = BlockPortals.configuration.getBoolean(opt, true);
-                if (allow){
+                if (allow) {
                     String alreadyA = BlockPortals.configuration.getString("messages.allowed-already", "&aPortals to &e%dim%&d already&a allowed");
                     sender.sendMessage(color(alreadyA.replace("%dim%", world)));
                     return true;
@@ -57,9 +58,9 @@ public class SwitchDimCmd implements CommandExecutor {
                     BlockPortals.configuration.set(opt, true);
                     sender.sendMessage(color(msgA));
                 }
-            } else if (state.equalsIgnoreCase("off")){
+            } else if (state.equalsIgnoreCase("off")) {
                 boolean allow = BlockPortals.configuration.getBoolean(opt, true);
-                if (!allow){
+                if (!allow) {
                     String alreadyB = BlockPortals.configuration.getString("messages.blocked-already", "&cPortals to &e%dim%&d already&c blocked");
                     sender.sendMessage(color(alreadyB.replace("%dim%", world)));
                     return true;
