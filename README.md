@@ -12,6 +12,9 @@ Allows admins to block and allows portal teleporting to overworld, nether, end
 allow-end: true
 allow-nether: true
 allow-overworld: true
+
+creative-bypass: true # players with creative game mode can bypass check and use portals as normal
+
 messages:
   reloaded: '&aConfig reloaded!'
   allowed: '&aPortals to &e%dim%&a allowed'
