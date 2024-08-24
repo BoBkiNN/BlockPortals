@@ -13,7 +13,7 @@ allow-end: true
 allow-nether: true
 allow-overworld: true
 
-creative-bypass: true # players with creative game mode can bypass check and use portals as normal
+creative-bypass: true # players with creative gamemode can bypass check and use portals as normal
 
 messages:
   reloaded: '&aConfig reloaded!'
